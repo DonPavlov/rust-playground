@@ -1,5 +1,5 @@
 fn main() {
-    const MAX_POINTS: u32 = 100_000;
+    const MAX_POINTS: u32 = 100_000; // _ is a visual separator
     let mut x = 5;
     println!("The value of x is: {}", x);
     x = 6;
@@ -12,6 +12,61 @@ fn main() {
     println!("The value of max_points is: {}", MAX_POINTS);
 
     // let can reassign different types to same variable
-    // let spaces = "   ";
-    // let spaces = spaces.len();
+    let spaces = "   ";
+    println!("print spaces: {}", spaces);
+    let spaces = spaces.len();
+    println!("reprint spaces as number: {}", spaces);
+
+    let x = 2.0;
+    println!("The value of x as float is: {}", x);
+    let y: f32 = 3.0; // f32
+    println!("The value of y as float is: {}", y);
+
+    let t = true;
+
+    let f: bool = false; // with explicit type annotation
+    println!("print 2 bools: {} {}", t, f);
+
+    let c = 'z';
+    let z = 'ℤ';
+    let heart_eyed_cat = '😻';
+    println!("print chars: {} {} {}", c, z, heart_eyed_cat);
+
+    let tup = (500, 6.4, 1);
+
+    let (x, y, z) = tup;
+
+    println!("The value of x is: {}", x);
+    println!("The value of y is: {}", y);
+    println!("The value of z is: {}", z);
+
+
+    // access tuple elements with numbers
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+
+    let five_hundred = x.0;
+
+    let six_point_four = x.1;
+
+    let one = x.2;
+
+    // an array
+    let a = [1, 2, 3, 4, 5];
+
+    let months = ["January", "February", "March", "April", "May", "June", "July",
+                  "August", "September", "October", "November", "December"];
+
+    // define an arrays type
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    // init an array
+    let a = [3; 5];  // equals let a = [3, 3, 3, 3, 3];
+
+
+    let a = [1, 2, 3, 4, 5];
+    let index = 10;
+
+    // let element = a[index];  // will through an error during compilation
+    // println!("The value of element is: {}", element);
+
 }
